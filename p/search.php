@@ -6,23 +6,15 @@ header("Expires: 0"); // Proxies.
 require_once "endpoint.php";
 require_once "filter.php";
 
-if (isset($_GET['from']) && !empty($_GET['from'])) {
-  if (isset($_GET['to']) && !empty($_GET['to'])) {
-    $viewData = filterDataByFromTo($resultData, $_GET['from'], $_GET['to']);
-  } else {
-    $viewData = filterDataByFrom($resultData, $_GET['from']);
-  }
+$from = isset($_GET['from']) && !empty($_GET['from']) ? $_GET['from'] : null;
+$to = isset($_GET['to']) && !empty($_GET['to']) ? $_GET['to'] : null;
+$minPrice = isset($_GET['minPrice']) && !empty($_GET['minPrice']) ? $_GET['minPrice'] : null;
+$maxPrice = isset($_GET['maxPrice']) && !empty($_GET['maxPrice']) ? $_GET['maxPrice'] : null;
+$agent = isset($_GET['agent']) && !empty($_GET['agent']) ? $_GET['agent'] : null;
 
-  if (count($viewData) == 0) {
-    $isDataFound = false;
-  } else {
-    $isDataFound = true;
-  }
+$viewData = filterData($resultData, $from, $to, $minPrice, $maxPrice, $agent);
 
-  
-} else {
-  $isDataFound = false;
-};
+$isDataFound = empty($viewData) ? false : true;
 
 ?>
 
@@ -42,8 +34,7 @@ if (isset($_GET['from']) && !empty($_GET['from'])) {
     <style media="screen">
     ::-webkit-scrollbar {width: 4px;}
     ::-webkit-scrollbar-thumb {
-      background: rgb(125,195,190);
-      background: linear-gradient(356deg, rgba(125,195,190,1) 0%, rgba(255,176,220,1) 100%);
+      background: rgba(0, 0, 0, 0.7);
       border-radius: 10px;
     }
     html {

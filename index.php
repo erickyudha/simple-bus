@@ -18,8 +18,7 @@ header("Expires: 0"); // Proxies. ?>
     <style media="screen">
     ::-webkit-scrollbar {width: 4px;}
     ::-webkit-scrollbar-thumb {
-      background: rgb(125,195,190);
-      background: linear-gradient(356deg, rgba(125,195,190,1) 0%, rgba(255,176,220,1) 100%);
+      background: rgba(0, 0, 0, 0.7);
       border-radius: 10px;
     }
     html {
@@ -76,6 +75,30 @@ header("Expires: 0"); // Proxies. ?>
               
             </div>
 
+            <div class="form-input-child fic1 bottom-shelf">
+              <div class="input-cont">
+                <i class="fas fa-tag"></i>
+               <input type="text" id="minPrice" name="minPrice" autocomplete="off" placeholder="Minimum price"> 
+              </div>
+              
+            </div>
+
+            <div class="form-input-child fic2 bottom-shelf">
+              <div class="input-cont">
+                <i class="fas fa-tags"></i>
+                <input type="text" id="maxPrice" name="maxPrice" autocomplete="off" placeholder="Maximum price"> 
+              </div>
+              
+            </div>
+
+            <div class="form-input-child fic3">
+              <div class="input-cont">
+              <i class="fas fa-address-card"></i>
+               <input type="text" id="agName" name="agent" autocomplete="off" placeholder="Agent"> 
+              </div>
+              
+            </div>
+
           </div>
           <div class="btn-container">
             <button class="btn-grad btn btn-dark" type="submit">Search</button>
@@ -90,7 +113,7 @@ header("Expires: 0"); // Proxies. ?>
       <div class="about-us">
         <div class="about-us-text">
           <h3>About Us</h3>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia ab rerum consequatur consectetur aut, nam, accusantium illum, et dignissimos laborum animi. Repellat eos quo quos doloremque nulla, minus molestias fugiat!</p>
+          <p>Just the best bus ticket database site in the universe. Nothing less, nothing more.</p>
         </div>
       </div>
 
