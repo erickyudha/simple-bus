@@ -60,6 +60,11 @@ body {
   padding: 15px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: 
+  "a b"
+  "c d"
+  "agent agent";
   margin: 10px;
 }
 
@@ -90,6 +95,7 @@ body {
   border-bottom-right-radius: 5px;
   height: 100%;
   outline: none;
+  
 }
 .input-cont:active {
   background-color: none;
@@ -105,6 +111,12 @@ body {
   place-self: center start;
   border-top: 1px solid;
   border-bottom: 1px solid;
+}
+.fic3 {
+  grid-area: agent;
+}
+.bottom-shelf {
+  border-top: none;
 }
 
 .btn-container {
