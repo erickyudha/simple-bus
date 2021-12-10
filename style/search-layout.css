@@ -1,6 +1,7 @@
 html, body {
   max-width: 100%;
   overflow-x: hidden;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .bus-nav {
@@ -8,21 +9,20 @@ html, body {
   height: 64px;
 }
 
-.navbar {
-  position: static;
+.bus-nav{
+  background-color: rgb(24, 24, 148);
 }
-
 .navbar-brand {
   color: white;
 }
 
 body {
+  margin-top: 40px;
   width: 100vw;
   min-height: 100vh;
   margin-bottom: 60px;
-  color: white;
-  background-color: #000000;
-  background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+  color: #000000;
+  background-color: white;
 
 }
 
@@ -43,15 +43,17 @@ body {
   margin-top: 20px;
 }
 .result-list li {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
+  background-color: rgb(42, 42, 211);
+  color: white;
+  border-radius: 15px;
   padding: 30px 50px;
   display: grid;
   grid-template-areas: 
-  "agent . facility"
-  "agent . facility"
+  "agent facility ."
+  "agent facility ."
   "route route price"
   ;
+  grid-template-columns: 1fr 1.5fr 0.5fr;
   width: 80vw;
 }
 .agent {
@@ -62,6 +64,7 @@ body {
   display: grid;
   grid-template-columns: 4fr 5fr 13fr;
   place-self: center start;
+  font-family: Brush Script MT, cursive ;
 }
 .from {
   place-self: center end;
@@ -79,4 +82,6 @@ body {
 .price {
   grid-area: price;
   place-self: start end;
+  font-size: larger;
+  font-weight: bold;
 }

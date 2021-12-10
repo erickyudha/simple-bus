@@ -56,12 +56,13 @@ if (isset($_GET['from']) && !empty($_GET['from'])) {
     <title>TerminalBus</title>
   </head>
   <body>
-    <nav class="navbar bus-nav">
+    <nav class="navbar bus-nav fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">
-          <i class="fas fa-bus-alt"></i>
+        <p class="navbar-brand">
+          <i class="fas fa-bus-alt"></i> &nbsp
           TerminalBus
-        </a>
+        </p>
+        <a class="btn btn-warning"  href="../index.php" role="button">Home</a>
       </div>
     </nav>
 
@@ -101,6 +102,7 @@ if (isset($_GET['from']) && !empty($_GET['from'])) {
 
       </ul>
       -->
+      
 
       <?php 
       if ($isDataFound) {
@@ -116,16 +118,16 @@ if (isset($_GET['from']) && !empty($_GET['from'])) {
           echo '</div>
           </div>
           <div class="from-to">
-            <h4 class="from">';
+            <h1 class="from">';
           echo $data['from'];
-          echo '</h4>
+          echo '</h1>
           <i class="fas fa-long-arrow-alt-right"></i>
-          <h4 class="to">';
+          <h1 class="to">';
           echo $data['to'];
-          echo '</h4>
+          echo '</h1>
           </div>
           <div class="facility">
-            <h5>Facility:</h5>
+            <h4>Facility:</h4>
             <p>';
           echo $data['facility'];
           echo '</p>

@@ -1,3 +1,7 @@
+<?php 
+header("Cache-Control: no-cache, no-store, must-revalidate"); // HTTP 1.1.
+header("Pragma: no-cache"); // HTTP 1.0.
+header("Expires: 0"); // Proxies. ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -27,28 +31,30 @@
     <title>TerminalBus</title>
   </head>
   <body>
-    <nav class="navbar bus-nav">
+    <nav class="navbar bus-nav fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">
-          <i class="fas fa-bus-alt"></i>
+        <p class="navbar-brand" >
+          <i class="fas fa-bus-alt"></i> &nbsp
           TerminalBus
-        </a>
+        </p>
       </div>
     </nav>
+
     
     <div class="hero">
       <div class="hero-text">
         <h1>Welcome to TerminalBus.com</h1>
         <h2>Find the best ticket bus in exsistence!</h2>
         <a href="">
-          <button>Go</button>
+        <a class="btn btn-warning btn-lg"  href="#ticket" role="button">Go</a>
         </a>
       </div>
       <img src="img/bus-cutout.png" alt="">
       
     </div>
 
-    <div class="ticket-search">
+    <Div class="ticket" id="ticket"><br><br>
+      <div class="ticket-search">
         <form action="p/search.php" method="get">
           <div class="form-upper-text"> 
             <h3>Hello,</h3>
@@ -56,29 +62,29 @@
           </div>
           <div class="form-input">
             <div class="form-input-child fic1">
-              <label for="from">From</label>
               <div class="input-cont">
                 <i class="fas fa-arrow-right"></i>
-                <input type="text" id="from" name="from">
+                <input type="text" id="from" name="from" autocomplete="off" placeholder="From">
               </div>
               
             </div>
             <div class="form-input-child fic2">
-              <label for="to">To</label>
               <div class="input-cont">
                <i class="fas fa-arrow-left"></i>
-               <input type="text" id="to" name="to"> 
+               <input type="text" id="to" name="to" autocomplete="off" placeholder="To"> 
               </div>
               
             </div>
 
           </div>
           <div class="btn-container">
-            <button class="btn-grad" type="submit">Search</button>
+            <button class="btn-grad btn btn-dark" type="submit">Search</button>
           </div>
         </form>
 
       </div>
+    </Div>
+    
 
 
       <div class="about-us">

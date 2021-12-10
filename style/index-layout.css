@@ -1,37 +1,34 @@
 html, body {
   max-width: 100%;
   overflow-x: hidden;
+  font-family: 'Times New Roman', Times, serif;
 }
-
 .bus-nav {
   width: 100vw;
   height: 64px;
-}
-
-.navbar {
-  position: static;
+  background-color: rgb(24, 24, 148);
 }
 
 .navbar-brand {
   color: white;
 }
-
 body {
   width: 100vw;
-  color: white;
-  background-color: #000000;
-  background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+  color: rgb(0, 0, 0);
+  background-color: white;
+  
 }
 
 .hero {
-  width: 100vw;
-  height: 480px;
   display: grid;
   grid-template-columns: 5fr 6fr;
+  color: white;
+  background-color: rgb(116, 111, 167);
 }
 
 .hero-text {
   place-self: center center;
+  margin: 100px 100px 100px 100px;
 }
 
 .hero img {
@@ -39,30 +36,37 @@ body {
   height: auto;
   place-self: center start;
   user-select: none;
+  margin: 100px 0px 100px 0px;
+}
+
+.ticket{ 
+  margin: 80px 8vw;
+  padding: 50px 5vw;
 }
 
 .ticket-search {
-  margin: 80px 8vw;
-  padding: 50px 5vw;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
+  border-radius: 15px;
+  border-style: outset;
 }
 
 .form-upper-text {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-  padding-bottom: 20px;
+  border-radius: 15px 15px 0px 0px;
+  padding: 25px;
+  background-color: rgb(40, 40, 114);
+  color: white;
 }
 
 .form-input {
+  padding: 15px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 10px 4vw;
+  margin: 10px;
 }
 
 .form-input-child {
   display: grid;
-  grid-template-rows: 2fr 3fr;
-  padding: 10px 30px;
+  grid-template-rows: 2fr;
+  padding: 20px 30px;
   margin: 0;
 }
 .form-input-child label {
@@ -72,6 +76,7 @@ body {
   background-color: white;
   margin: 0;
   place-self: center center;
+  border: 1px solid;
   border-radius: 5px;
   padding: 10px 20px 10px 10px;
 }
@@ -92,15 +97,18 @@ body {
 
 .fic1 {
   place-self: center end;
-  border-right: 1px solid rgba(255, 255, 255, 0.4);
+  border-right: 1px solid ;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
 }
 .fic2 {
   place-self: center start;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
 }
 
 .btn-container {
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
-  padding-top: 20px;
+  padding: 20px;
   display: grid;
 }
 .btn-container button {
@@ -117,13 +125,13 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  margin-top: 200px;
 }
 .about-us-text {
+  color: white;
   display: grid;
   align-items: center;
   justify-items: center;
-  background-color: rgba(0, 0, 0, 0.713);
+  background-color: rgba(77, 91, 214, 0.5);
   width: 100%;
   height: 100%;
   padding: 180px 10vw 180px 10vw;
@@ -132,6 +140,7 @@ body {
 footer {
   height: 64px;
   width: 100vw;
+  color: white;
   background-color: #000000;
   display: grid;
 }
@@ -164,7 +173,7 @@ footer h6 {
   .fic1 {
     place-self: end center;
     border-right: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    border-bottom: none;
   }
   .fic2 {
     place-self: start center;
