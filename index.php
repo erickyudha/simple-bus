@@ -75,7 +75,7 @@ header("Expires: 0"); // Proxies. ?>
               
             </div>
 
-            <div class="form-input-child fic1 bottom-shelf">
+            <div class="form-input-child fic1 bottom-shelf minp">
               <div class="input-cont">
                 <i class="fas fa-tag"></i>
                <input type="text" id="minPrice" name="minPrice" autocomplete="off" placeholder="Minimum price"> 

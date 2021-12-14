@@ -61,10 +61,10 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto auto;
-  grid-template-areas: 
-  "a b"
-  "c d"
-  "agent agent";
+  grid-template-areas:
+    "a b"
+    "c d"
+    "agent agent";
   margin: 10px;
 }
 
@@ -177,9 +177,15 @@ footer h6 {
 
   .form-input {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
     grid-template-columns: 1fr;
     margin: 10px 4vw;
+    grid-template-areas:
+    "a"
+    "b"
+    "c"
+    "d"
+    "agent";
   }
 
   .fic1 {
@@ -189,5 +195,11 @@ footer h6 {
   }
   .fic2 {
     place-self: start center;
+  }
+  .minp {
+    border-bottom: 1px solid;
+  }
+  footer h6 {
+    font-size: 0.8em;
   }
 }

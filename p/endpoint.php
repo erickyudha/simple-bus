@@ -4,7 +4,7 @@ require_once "../vendor/autoload.php";
 EasyRdf\RdfNamespace::set('rdf','http://www.w3.org/1999/02/22-rdf-syntax-ns#');
 EasyRdf\RdfNamespace::set('bus','http://bus-usu.herokuapp.com/bus/ontology#');
 
-$graph = \EasyRdf\Graph::newAndLoad("https://erickyudha.github.io/public/bus.rdf");
+$graph = \EasyRdf\Graph::newAndLoad("https://erickyudha.github.io/public/simple-bus.rdf");
 
 $allData = $graph->resourcesMatching('bus:class');
 
