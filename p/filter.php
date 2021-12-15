@@ -1,7 +1,7 @@
 <?php
 function filterDataByFromTo($busData, $targetFrom, $targetTo) {
   $result = array();
-  if (!is_null($targetTo)) {
+  if (!is_null($targetTo) && !is_null($targetFrom)) {
     foreach ($busData as $data) {
       if (
         str_contains(strtolower($data['from']), strtolower($targetFrom)) &&
